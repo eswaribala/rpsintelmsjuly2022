@@ -3,10 +3,7 @@ using CatalogAPI.Queries;
 using CatalogAPI.Repositories;
 using GraphQL;
 using GraphQL.Types;
-using InventoryService.GraphqlQueries;
-using InventoryService.Models;
-using InventoryService.Queries;
-using InventoryService.Repositories;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
