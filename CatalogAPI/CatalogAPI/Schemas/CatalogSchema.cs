@@ -1,4 +1,5 @@
-﻿using CatalogAPI.Queries;
+﻿using CatalogAPI.GraphqlMutations;
+using CatalogAPI.Queries;
 using GraphQL.Types;
 
 
@@ -10,7 +11,7 @@ namespace CatalogAPI.Schemas
         public CatalogSchema(IServiceProvider ServiceProvider)
         {
             Query = ServiceProvider.GetRequiredService<CatalogQuery>();
-            //Mutation = ServiceProvider.GetRequiredService<CatalogMutation>();
+            Mutation = ServiceProvider.GetRequiredService<CatalogMutation>();
         }
     }
 }
