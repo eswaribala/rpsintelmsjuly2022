@@ -20,6 +20,14 @@ using System.Threading.Tasks;
     "catalogName": "Computer Accessories"
   }
 }
+
+mutation($catalogId:Long!){
+  deleteCatalog(catalogId:$catalogId)
+}
+
+{
+  "catalogId": 4
+}
  */
 
 
