@@ -1,5 +1,12 @@
-var builder = WebApplication.CreateBuilder(args);
+using CatalogAPI.Contexts;
+using Microsoft.EntityFrameworkCore;
 
+var builder = WebApplication.CreateBuilder(args);
+ConfigurationManager configuration = builder.Configuration;
+
+builder.Services.AddDbContext<CatalogContext>(options =>
+options.UseSqlServer(configuration.
+GetConnectionString("Catalog_Conn_String")));
 // Add services to the container.
 
 builder.Services.AddControllers();
