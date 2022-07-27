@@ -9,38 +9,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 /*
- * mutation($stock:StockInput!,$catalog:CatalogInput!,$product:ProductInput!,$location:LocationInput!){
-  insertStockProductLocation(stock:$stock,catalog:$catalog,product:$product,location:$location){
-  qty
-    
+ *mutation($catalog:CatalogInput){
+  insertCatalog(catalog:$catalog){
+    catalogName
     
   }
 }
 {
-  "stock": {
-    "qty": 6780,
-     "comments": "verified",
-    "productId": 1,
-    "regionalCode": 1
-  },
   "catalog": {
-    "catalogName": "Electronics"
-  },
-  "product":{
-    "productId": 1,
-    "productType":0,
-    "catalogId": 1,
-    "productDetail": {
-      "productName": "Laptop",
-      "description": "test",
-      "dOP": "2021-03-01",
-      "cost": 56000
-    }
-  } ,
-  "location": {
-    "locationAddress": "chennai",
-    "mobileNo": 9952032862,
-"regionalCode": 1    
+    "catalogName": "Computer Accessories"
   }
 }
  */
