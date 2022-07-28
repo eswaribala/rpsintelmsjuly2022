@@ -14,8 +14,8 @@ namespace CatalogAPI.Models
        
         public async Task<Dictionary<string, object>> GetDBCredentials()
         {
-          string token = _configuration["Root_Token"];
-            string url = _configuration["Vault_Url"];
+          string token = _configuration["roottoken"];
+            string url = _configuration["url"];
 
             // Initialize one of the several auth methods.
             IAuthMethodInfo authMethod = new TokenAuthMethodInfo(token);
