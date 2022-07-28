@@ -8,19 +8,23 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using Steeltoe.Extensions.Configuration.ConfigServer;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Configuration.AddConfigServer();
 ConfigurationManager configuration = builder.Configuration;
 
 Dictionary<String, Object> data = new VaultConfiguration(configuration)
     .GetDBCredentials().Result;
 Console.WriteLine(data);
 SqlConnectionStringBuilder providerCs = new SqlConnectionStringBuilder();
+//reading from Vault server
 providerCs.InitialCatalog = data["dbname3"].ToString();
 providerCs.UserID = data["username"].ToString();
 providerCs.Password = data["password"].ToString();
-providerCs.DataSource = "DESKTOP-55AGI0I\\MSSQLEXPRESS2021";
-//providerCs.DataSource = configuration["servername"];
+//providerCs.DataSource = "DESKTOP-55AGI0I\\MSSQLEXPRESS2021";
+//reading via config server
+providerCs.DataSource = configuration["servername"];
 
 //providerCs.UserID = CryptoService2.Decrypt(ConfigurationManager.
 //AppSettings["UserId"]);

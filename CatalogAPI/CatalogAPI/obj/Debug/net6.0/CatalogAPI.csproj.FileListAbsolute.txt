@@ -80,3 +80,13 @@ G:\Local disk\Intelmsjul2022\CatalogAPI\CatalogAPI\obj\Debug\net6.0\CatalogAPI.g
 G:\Local disk\Intelmsjul2022\CatalogAPI\CatalogAPI\obj\Debug\net6.0\ref\CatalogAPI.dll
 G:\Local disk\Intelmsjul2022\CatalogAPI\CatalogAPI\bin\Debug\net6.0\GraphQL-Parser.dll
 G:\Local disk\Intelmsjul2022\CatalogAPI\CatalogAPI\bin\Debug\net6.0\VaultSharp.dll
+G:\Local disk\Intelmsjul2022\CatalogAPI\CatalogAPI\bin\Debug\net6.0\Steeltoe.Common.dll
+G:\Local disk\Intelmsjul2022\CatalogAPI\CatalogAPI\bin\Debug\net6.0\Steeltoe.Common.Abstractions.dll
+G:\Local disk\Intelmsjul2022\CatalogAPI\CatalogAPI\bin\Debug\net6.0\Steeltoe.Common.Http.dll
+G:\Local disk\Intelmsjul2022\CatalogAPI\CatalogAPI\bin\Debug\net6.0\Steeltoe.Discovery.Abstractions.dll
+G:\Local disk\Intelmsjul2022\CatalogAPI\CatalogAPI\bin\Debug\net6.0\Steeltoe.Extensions.Configuration.Abstractions.dll
+G:\Local disk\Intelmsjul2022\CatalogAPI\CatalogAPI\bin\Debug\net6.0\Steeltoe.Extensions.Configuration.CloudFoundryBase.dll
+G:\Local disk\Intelmsjul2022\CatalogAPI\CatalogAPI\bin\Debug\net6.0\Steeltoe.Extensions.Configuration.ConfigServerBase.dll
+G:\Local disk\Intelmsjul2022\CatalogAPI\CatalogAPI\bin\Debug\net6.0\Steeltoe.Extensions.Configuration.ConfigServerCore.dll
+G:\Local disk\Intelmsjul2022\CatalogAPI\CatalogAPI\bin\Debug\net6.0\Steeltoe.Extensions.Configuration.PlaceholderBase.dll
+G:\Local disk\Intelmsjul2022\CatalogAPI\CatalogAPI\bin\Debug\net6.0\System.Reflection.MetadataLoadContext.dll
