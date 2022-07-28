@@ -115,6 +115,10 @@
             "Swashbuckle.AspNetCore.SwaggerUI": {
               "target": "Package",
               "version": "[6.2.3, )"
+            },
+            "VaultSharp": {
+              "target": "Package",
+              "version": "[1.7.1, )"
             }
           },
           "imports": [

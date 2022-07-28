@@ -1020,6 +1020,18 @@
             "rid": "win"
           }
         }
+      },
+      "VaultSharp/1.7.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "compile": {
+          "lib/net6.0/VaultSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/VaultSharp.dll": {}
+        }
       }
     }
   },
@@ -3005,6 +3017,45 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "VaultSharp/1.7.1": {
+      "sha512": "OUlgzlFJqdOeloDWFa0haDL5QK5gfnaanSYQRt1CYqV2L3ZAVFuwqDS7lPw4ANqNs0xxZISewE8EXLrZ5qGgBQ==",
+      "type": "package",
+      "path": "vaultsharp/1.7.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/net45/VaultSharp.dll",
+        "lib/net45/VaultSharp.xml",
+        "lib/net46/VaultSharp.dll",
+        "lib/net46/VaultSharp.xml",
+        "lib/net461/VaultSharp.dll",
+        "lib/net461/VaultSharp.xml",
+        "lib/net462/VaultSharp.dll",
+        "lib/net462/VaultSharp.xml",
+        "lib/net47/VaultSharp.dll",
+        "lib/net47/VaultSharp.xml",
+        "lib/net471/VaultSharp.dll",
+        "lib/net471/VaultSharp.xml",
+        "lib/net472/VaultSharp.dll",
+        "lib/net472/VaultSharp.xml",
+        "lib/net48/VaultSharp.dll",
+        "lib/net48/VaultSharp.xml",
+        "lib/net5.0/VaultSharp.dll",
+        "lib/net5.0/VaultSharp.xml",
+        "lib/net6.0/VaultSharp.dll",
+        "lib/net6.0/VaultSharp.xml",
+        "lib/netstandard1.3/VaultSharp.dll",
+        "lib/netstandard1.3/VaultSharp.xml",
+        "lib/netstandard2.0/VaultSharp.dll",
+        "lib/netstandard2.0/VaultSharp.xml",
+        "lib/netstandard2.1/VaultSharp.dll",
+        "lib/netstandard2.1/VaultSharp.xml",
+        "vaultsharp.1.7.1.nupkg.sha512",
+        "vaultsharp.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -3024,7 +3075,8 @@
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.14.0",
       "Swashbuckle.AspNetCore >= 6.2.3",
       "Swashbuckle.AspNetCore.SwaggerGen >= 6.2.3",
-      "Swashbuckle.AspNetCore.SwaggerUI >= 6.2.3"
+      "Swashbuckle.AspNetCore.SwaggerUI >= 6.2.3",
+      "VaultSharp >= 1.7.1"
     ]
   },
   "packageFolders": {
@@ -3143,6 +3195,10 @@
           "Swashbuckle.AspNetCore.SwaggerUI": {
             "target": "Package",
             "version": "[6.2.3, )"
+          },
+          "VaultSharp": {
+            "target": "Package",
+            "version": "[1.7.1, )"
           }
         },
         "imports": [

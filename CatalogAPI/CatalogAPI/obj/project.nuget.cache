@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "M8p11LgH7qdUML69eZHWOQWJc8a+tmBeOFRbZwagTrLjSy/XnkIZF8V84bFm3N8GzqYgfc7qJ4OzuZwZVqIjzg==",
+  "dgSpecHash": "BHNTD1Q2yUMHiyNEAbc5V9Hgpvk5w/VxVdZ09zgYKQS9Pk0xESV6IVMT9dZIdm4bPlC7Yy0lIRtuZONa2cmXOw==",
   "success": true,
   "projectFilePath": "G:\\Local disk\\Intelmsjul2022\\CatalogAPI\\CatalogAPI\\CatalogAPI.csproj",
   "expectedPackageFiles": [
@@ -78,7 +78,8 @@
     "C:\\Users\\Balasubramaniam\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512",
     "C:\\Users\\Balasubramaniam\\.nuget\\packages\\system.threading.tasks.dataflow\\5.0.0\\system.threading.tasks.dataflow.5.0.0.nupkg.sha512",
     "C:\\Users\\Balasubramaniam\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\Balasubramaniam\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
+    "C:\\Users\\Balasubramaniam\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
+    "C:\\Users\\Balasubramaniam\\.nuget\\packages\\vaultsharp\\1.7.1\\vaultsharp.1.7.1.nupkg.sha512"
   ],
   "logs": []
 }
