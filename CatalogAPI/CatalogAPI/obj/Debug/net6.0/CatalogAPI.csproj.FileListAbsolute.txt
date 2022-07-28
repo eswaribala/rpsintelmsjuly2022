@@ -79,3 +79,4 @@ G:\Local disk\Intelmsjul2022\CatalogAPI\CatalogAPI\obj\Debug\net6.0\CatalogAPI.p
 G:\Local disk\Intelmsjul2022\CatalogAPI\CatalogAPI\obj\Debug\net6.0\CatalogAPI.genruntimeconfig.cache
 G:\Local disk\Intelmsjul2022\CatalogAPI\CatalogAPI\obj\Debug\net6.0\ref\CatalogAPI.dll
 G:\Local disk\Intelmsjul2022\CatalogAPI\CatalogAPI\bin\Debug\net6.0\GraphQL-Parser.dll
+G:\Local disk\Intelmsjul2022\CatalogAPI\CatalogAPI\bin\Debug\net6.0\VaultSharp.dll

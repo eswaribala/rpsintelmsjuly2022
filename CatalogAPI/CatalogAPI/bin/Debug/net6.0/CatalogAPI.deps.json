@@ -24,6 +24,7 @@
           "Swashbuckle.AspNetCore": "6.2.3",
           "Swashbuckle.AspNetCore.SwaggerGen": "6.2.3",
           "Swashbuckle.AspNetCore.SwaggerUI": "6.2.3",
+          "VaultSharp": "1.7.1",
           "System.Reactive.Reference": "4.4.0.0"
         },
         "runtime": {
@@ -711,6 +712,17 @@
           }
         }
       },
+      "VaultSharp/1.7.1": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "runtime": {
+          "lib/net6.0/VaultSharp.dll": {
+            "assemblyVersion": "1.7.1.0",
+            "fileVersion": "1.7.1.0"
+          }
+        }
+      },
       "System.Reactive.Reference/4.4.0.0": {
         "runtime": {
           "System.Reactive.dll": {
@@ -1251,6 +1263,13 @@
       "sha512": "sha512-CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
+    },
+    "VaultSharp/1.7.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OUlgzlFJqdOeloDWFa0haDL5QK5gfnaanSYQRt1CYqV2L3ZAVFuwqDS7lPw4ANqNs0xxZISewE8EXLrZ5qGgBQ==",
+      "path": "vaultsharp/1.7.1",
+      "hashPath": "vaultsharp.1.7.1.nupkg.sha512"
     },
     "System.Reactive.Reference/4.4.0.0": {
       "type": "reference",

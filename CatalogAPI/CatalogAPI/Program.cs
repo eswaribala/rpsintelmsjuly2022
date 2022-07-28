@@ -1,18 +1,39 @@
 using CatalogAPI.Contexts;
+using CatalogAPI.Models;
 using CatalogAPI.Repositories;
 using CatalogAPI.Schemas;
 using GraphQL.Server;
 using GraphQL.Server.Ui.Playground;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Versioning;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 ConfigurationManager configuration = builder.Configuration;
 
-builder.Services.AddDbContext<CatalogContext>(options =>
-options.UseSqlServer(configuration.
-GetConnectionString("Catalog_Conn_String")));
+Dictionary<String, Object> data = new VaultConfiguration(configuration)
+    .GetDBCredentials().Result;
+Console.WriteLine(data);
+SqlConnectionStringBuilder providerCs = new SqlConnectionStringBuilder();
+providerCs.InitialCatalog = data["dbname3"].ToString();
+providerCs.UserID = data["username"].ToString();
+providerCs.Password = data["password"].ToString();
+providerCs.DataSource = "DESKTOP-55AGI0I\\MSSQLEXPRESS2021";
+//providerCs.DataSource = configuration["servername"];
+
+//providerCs.UserID = CryptoService2.Decrypt(ConfigurationManager.
+//AppSettings["UserId"]);
+providerCs.MultipleActiveResultSets = true;
+providerCs.TrustServerCertificate = false;
+
+builder.Services.AddDbContext<CatalogContext>(o =>
+o.UseSqlServer(providerCs.ToString()));
+
+
+//builder.Services.AddDbContext<CatalogContext>(options =>
+//options.UseSqlServer(configuration.
+//GetConnectionString("Catalog_Conn_String")));
 // Add services to the container.
 //DI singelton,scoped or transient
 builder.Services.AddScoped<ICatalogRepo, CatalogRepo>();
