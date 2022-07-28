@@ -1,0 +1,51 @@
+﻿{
+    "Routes": [
+        {
+            "ServiceName": "ORDERAPI",
+            "DownstreamPathTemplate": "/WeatherForecast",
+            "UpstreamPathTemplate": "/orders",
+            "UpstreamHttpMethod": [ "GET" ],
+            "FileCacheOptions": {
+                "TtlSeconds": 15
+            },
+            "LoadBalancerOptions": {
+                "Type": "RoundRobin"
+            }
+        },
+        {
+            "ServiceName": "CARTAPI",
+            "DownstreamPathTemplate": "/WeatherForecast",
+            "UpstreamPathTemplate": "/carts",
+            "UpstreamHttpMethod": [ "GET" ],
+            "FileCacheOptions": {
+                "TtlSeconds": 15
+            },
+            "LoadBalancerOptions": {
+                "Type": "RoundRobin"
+            }
+        },
+        {
+            "ServiceName": "INTEL-COMMON",
+            "DownstreamPathTemplate": "/api/v2/Catalog",
+            "UpstreamPathTemplate": "/catalogs",
+            "UpstreamHttpMethod": [ "GET" ],
+            "FileCacheOptions": {
+                "TtlSeconds": 15
+            },
+            "LoadBalancerOptions": {
+                "Type": "RoundRobin"
+            }
+        }
+    ],
+    "GlobalConfiguration": {
+        "RequestIdKey": "OcRequestId",
+        "DownstreamScheme": "http",
+        "ReRoutesCaseSensitive": false,
+        "UseServiceDiscovery": true,
+        "ServiceDiscoveryProvider": {
+            "Host": "localhost",
+            "Port": 8761,
+            "Type": "Eureka"
+        }
+    }
+}

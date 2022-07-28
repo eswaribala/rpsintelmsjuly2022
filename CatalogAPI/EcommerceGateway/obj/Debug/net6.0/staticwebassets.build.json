@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "heTBYVeYy2ZJKyFTF8Mqm+Qvg21yG7Am6I4lJdFocwE=",
+  "Source": "EcommerceGateway",
+  "BasePath": "_content/EcommerceGateway",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
