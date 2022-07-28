@@ -1015,6 +1015,33 @@
           "lib/netstandard2.0/Steeltoe.Common.Http.dll": {}
         }
       },
+      "Steeltoe.Connector.Abstractions/3.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Steeltoe.Common.Abstractions": "3.2.0",
+          "Steeltoe.Extensions.Configuration.Abstractions": "3.2.0"
+        },
+        "compile": {
+          "lib/net6.0/Steeltoe.Connector.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Steeltoe.Connector.Abstractions.dll": {}
+        }
+      },
+      "Steeltoe.Connector.ConnectorBase/3.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Steeltoe.Common": "3.2.0",
+          "Steeltoe.Connector.Abstractions": "3.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Steeltoe.Connector.ConnectorBase.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Steeltoe.Connector.ConnectorBase.dll": {}
+        }
+      },
       "Steeltoe.Discovery.Abstractions/3.2.0": {
         "type": "package",
         "dependencies": {
@@ -1026,6 +1053,37 @@
         },
         "runtime": {
           "lib/netstandard2.0/Steeltoe.Discovery.Abstractions.dll": {}
+        }
+      },
+      "Steeltoe.Discovery.ClientBase/3.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Hosting": "6.0.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "6.0.0",
+          "Steeltoe.Common.Http": "3.2.0",
+          "Steeltoe.Connector.ConnectorBase": "3.2.0",
+          "Steeltoe.Discovery.Abstractions": "3.2.0"
+        },
+        "compile": {
+          "lib/net6.0/Steeltoe.Discovery.ClientBase.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Steeltoe.Discovery.ClientBase.dll": {}
+        }
+      },
+      "Steeltoe.Discovery.Eureka/3.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Steeltoe.Common.Http": "3.2.0",
+          "Steeltoe.Connector.Abstractions": "3.2.0",
+          "Steeltoe.Discovery.ClientBase": "3.2.0",
+          "System.Net.Http.Json": "3.2.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Steeltoe.Discovery.Eureka.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Steeltoe.Discovery.Eureka.dll": {}
         }
       },
       "Steeltoe.Extensions.Configuration.Abstractions/3.2.0": {
@@ -3118,6 +3176,36 @@
         "steeltoe.common.http.nuspec"
       ]
     },
+    "Steeltoe.Connector.Abstractions/3.2.0": {
+      "sha512": "Mfw0X0ad2polFC3x5hpCW/UoNE/e3IENdC4vWvs8zD8Os+V1VT+0xVDlTgmWTXcqdwD4LvL2ScLJh6flgI63Ag==",
+      "type": "package",
+      "path": "steeltoe.connector.abstractions/3.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net6.0/Steeltoe.Connector.Abstractions.dll",
+        "lib/net6.0/Steeltoe.Connector.Abstractions.xml",
+        "lib/netstandard2.0/Steeltoe.Connector.Abstractions.dll",
+        "lib/netstandard2.0/Steeltoe.Connector.Abstractions.xml",
+        "steeltoe.connector.abstractions.3.2.0.nupkg.sha512",
+        "steeltoe.connector.abstractions.nuspec"
+      ]
+    },
+    "Steeltoe.Connector.ConnectorBase/3.2.0": {
+      "sha512": "ODiJpXxVOhuyr4YGN8TsUqo4unFR8DyvzST/ZJxpPERFWhsxG/k7WaJ24sQGVOPkPw4fvvpgv+8oefjtyfSs9A==",
+      "type": "package",
+      "path": "steeltoe.connector.connectorbase/3.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/netstandard2.0/Steeltoe.Connector.ConnectorBase.dll",
+        "lib/netstandard2.0/Steeltoe.Connector.ConnectorBase.xml",
+        "steeltoe.connector.connectorbase.3.2.0.nupkg.sha512",
+        "steeltoe.connector.connectorbase.nuspec"
+      ]
+    },
     "Steeltoe.Discovery.Abstractions/3.2.0": {
       "sha512": "WdHceaUXZCDd1+06XTN08lN6+RUQ3hBMm8wvTJFgysXopvysOq4TI992MsCQkzcotVhPBBcsY6YY/JZuFeelaw==",
       "type": "package",
@@ -3130,6 +3218,36 @@
         "lib/netstandard2.0/Steeltoe.Discovery.Abstractions.xml",
         "steeltoe.discovery.abstractions.3.2.0.nupkg.sha512",
         "steeltoe.discovery.abstractions.nuspec"
+      ]
+    },
+    "Steeltoe.Discovery.ClientBase/3.2.0": {
+      "sha512": "mECqmIDi4SUyNqmWWAknUMMxyweq28IS/Knv7/cbIyX04BQs/vM6iZmxcANMywPmjM5a5v7+D+UVcB8nobNlAw==",
+      "type": "package",
+      "path": "steeltoe.discovery.clientbase/3.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net6.0/Steeltoe.Discovery.ClientBase.dll",
+        "lib/net6.0/Steeltoe.Discovery.ClientBase.xml",
+        "lib/netstandard2.0/Steeltoe.Discovery.ClientBase.dll",
+        "lib/netstandard2.0/Steeltoe.Discovery.ClientBase.xml",
+        "steeltoe.discovery.clientbase.3.2.0.nupkg.sha512",
+        "steeltoe.discovery.clientbase.nuspec"
+      ]
+    },
+    "Steeltoe.Discovery.Eureka/3.2.0": {
+      "sha512": "51cbXfXTqBS2wTPCYAx1vL+tNDLt6FU26WGdI9gmJwY20cbXvpQYg2Vs/cakc/wsVB8yxwL5/mQIRoG2lB2xTQ==",
+      "type": "package",
+      "path": "steeltoe.discovery.eureka/3.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/netstandard2.0/Steeltoe.Discovery.Eureka.dll",
+        "lib/netstandard2.0/Steeltoe.Discovery.Eureka.xml",
+        "steeltoe.discovery.eureka.3.2.0.nupkg.sha512",
+        "steeltoe.discovery.eureka.nuspec"
       ]
     },
     "Steeltoe.Extensions.Configuration.Abstractions/3.2.0": {
@@ -4254,6 +4372,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.7",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.7",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.14.0",
+      "Steeltoe.Discovery.Eureka >= 3.2.0",
       "Steeltoe.Extensions.Configuration.ConfigServerCore >= 3.2.0",
       "Swashbuckle.AspNetCore >= 6.2.3",
       "Swashbuckle.AspNetCore.SwaggerGen >= 6.2.3",
@@ -4365,6 +4484,10 @@
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
             "target": "Package",
             "version": "[1.14.0, )"
+          },
+          "Steeltoe.Discovery.Eureka": {
+            "target": "Package",
+            "version": "[3.2.0, )"
           },
           "Steeltoe.Extensions.Configuration.ConfigServerCore": {
             "target": "Package",

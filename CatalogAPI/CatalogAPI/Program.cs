@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using Steeltoe.Discovery.Client;
 using Steeltoe.Extensions.Configuration.ConfigServer;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -42,6 +43,7 @@ o.UseSqlServer(providerCs.ToString()));
 //DI singelton,scoped or transient
 builder.Services.AddScoped<ICatalogRepo, CatalogRepo>();
 builder.Services.AddControllers();
+builder.Services.AddDiscoveryClient(configuration);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddApiVersioning(x =>

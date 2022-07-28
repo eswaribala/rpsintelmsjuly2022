@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "jMNUT77lTQ/yuKDjtb2ygMEV/ZwNm+6npDdJu1B1+y2g4uLAiRzSrDzZEIb9Wqy9jLR6upuLLi+b01JUghkP1Q==",
+  "dgSpecHash": "SEuajJj476bxwbK6wWGolS1OMx3K40IBHvj5UjHS7Eq/W22dtDciXxircbgam2s0lic6ZgGR99+8cV06ULuqBA==",
   "success": true,
   "projectFilePath": "G:\\Local disk\\Intelmsjul2022\\CatalogAPI\\CatalogAPI\\CatalogAPI.csproj",
   "expectedPackageFiles": [
@@ -74,7 +74,11 @@
     "C:\\Users\\Balasubramaniam\\.nuget\\packages\\steeltoe.common\\3.2.0\\steeltoe.common.3.2.0.nupkg.sha512",
     "C:\\Users\\Balasubramaniam\\.nuget\\packages\\steeltoe.common.abstractions\\3.2.0\\steeltoe.common.abstractions.3.2.0.nupkg.sha512",
     "C:\\Users\\Balasubramaniam\\.nuget\\packages\\steeltoe.common.http\\3.2.0\\steeltoe.common.http.3.2.0.nupkg.sha512",
+    "C:\\Users\\Balasubramaniam\\.nuget\\packages\\steeltoe.connector.abstractions\\3.2.0\\steeltoe.connector.abstractions.3.2.0.nupkg.sha512",
+    "C:\\Users\\Balasubramaniam\\.nuget\\packages\\steeltoe.connector.connectorbase\\3.2.0\\steeltoe.connector.connectorbase.3.2.0.nupkg.sha512",
     "C:\\Users\\Balasubramaniam\\.nuget\\packages\\steeltoe.discovery.abstractions\\3.2.0\\steeltoe.discovery.abstractions.3.2.0.nupkg.sha512",
+    "C:\\Users\\Balasubramaniam\\.nuget\\packages\\steeltoe.discovery.clientbase\\3.2.0\\steeltoe.discovery.clientbase.3.2.0.nupkg.sha512",
+    "C:\\Users\\Balasubramaniam\\.nuget\\packages\\steeltoe.discovery.eureka\\3.2.0\\steeltoe.discovery.eureka.3.2.0.nupkg.sha512",
     "C:\\Users\\Balasubramaniam\\.nuget\\packages\\steeltoe.extensions.configuration.abstractions\\3.2.0\\steeltoe.extensions.configuration.abstractions.3.2.0.nupkg.sha512",
     "C:\\Users\\Balasubramaniam\\.nuget\\packages\\steeltoe.extensions.configuration.cloudfoundrybase\\3.2.0\\steeltoe.extensions.configuration.cloudfoundrybase.3.2.0.nupkg.sha512",
     "C:\\Users\\Balasubramaniam\\.nuget\\packages\\steeltoe.extensions.configuration.configserverbase\\3.2.0\\steeltoe.extensions.configuration.configserverbase.3.2.0.nupkg.sha512",

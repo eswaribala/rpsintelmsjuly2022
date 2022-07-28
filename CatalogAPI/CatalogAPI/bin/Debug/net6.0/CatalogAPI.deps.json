@@ -21,6 +21,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.7",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.7",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.14.0",
+          "Steeltoe.Discovery.Eureka": "3.2.0",
           "Steeltoe.Extensions.Configuration.ConfigServerCore": "3.2.0",
           "Swashbuckle.AspNetCore": "6.2.3",
           "Swashbuckle.AspNetCore.SwaggerGen": "6.2.3",
@@ -709,6 +710,31 @@
           }
         }
       },
+      "Steeltoe.Connector.Abstractions/3.2.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Steeltoe.Common.Abstractions": "3.2.0",
+          "Steeltoe.Extensions.Configuration.Abstractions": "3.2.0"
+        },
+        "runtime": {
+          "lib/net6.0/Steeltoe.Connector.Abstractions.dll": {
+            "assemblyVersion": "3.2.0.0",
+            "fileVersion": "3.2.0.0"
+          }
+        }
+      },
+      "Steeltoe.Connector.ConnectorBase/3.2.0": {
+        "dependencies": {
+          "Steeltoe.Common": "3.2.0",
+          "Steeltoe.Connector.Abstractions": "3.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Steeltoe.Connector.ConnectorBase.dll": {
+            "assemblyVersion": "3.2.0.0",
+            "fileVersion": "3.2.0.0"
+          }
+        }
+      },
       "Steeltoe.Discovery.Abstractions/3.2.0": {
         "dependencies": {
           "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
@@ -716,6 +742,35 @@
         },
         "runtime": {
           "lib/netstandard2.0/Steeltoe.Discovery.Abstractions.dll": {
+            "assemblyVersion": "3.2.0.0",
+            "fileVersion": "3.2.0.0"
+          }
+        }
+      },
+      "Steeltoe.Discovery.ClientBase/3.2.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Hosting": "6.0.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "6.0.0",
+          "Steeltoe.Common.Http": "3.2.0",
+          "Steeltoe.Connector.ConnectorBase": "3.2.0",
+          "Steeltoe.Discovery.Abstractions": "3.2.0"
+        },
+        "runtime": {
+          "lib/net6.0/Steeltoe.Discovery.ClientBase.dll": {
+            "assemblyVersion": "3.2.0.0",
+            "fileVersion": "3.2.0.0"
+          }
+        }
+      },
+      "Steeltoe.Discovery.Eureka/3.2.0": {
+        "dependencies": {
+          "Steeltoe.Common.Http": "3.2.0",
+          "Steeltoe.Connector.Abstractions": "3.2.0",
+          "Steeltoe.Discovery.ClientBase": "3.2.0",
+          "System.Net.Http.Json": "3.2.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Steeltoe.Discovery.Eureka.dll": {
             "assemblyVersion": "3.2.0.0",
             "fileVersion": "3.2.0.0"
           }
@@ -1538,12 +1593,40 @@
       "path": "steeltoe.common.http/3.2.0",
       "hashPath": "steeltoe.common.http.3.2.0.nupkg.sha512"
     },
+    "Steeltoe.Connector.Abstractions/3.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Mfw0X0ad2polFC3x5hpCW/UoNE/e3IENdC4vWvs8zD8Os+V1VT+0xVDlTgmWTXcqdwD4LvL2ScLJh6flgI63Ag==",
+      "path": "steeltoe.connector.abstractions/3.2.0",
+      "hashPath": "steeltoe.connector.abstractions.3.2.0.nupkg.sha512"
+    },
+    "Steeltoe.Connector.ConnectorBase/3.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ODiJpXxVOhuyr4YGN8TsUqo4unFR8DyvzST/ZJxpPERFWhsxG/k7WaJ24sQGVOPkPw4fvvpgv+8oefjtyfSs9A==",
+      "path": "steeltoe.connector.connectorbase/3.2.0",
+      "hashPath": "steeltoe.connector.connectorbase.3.2.0.nupkg.sha512"
+    },
     "Steeltoe.Discovery.Abstractions/3.2.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-WdHceaUXZCDd1+06XTN08lN6+RUQ3hBMm8wvTJFgysXopvysOq4TI992MsCQkzcotVhPBBcsY6YY/JZuFeelaw==",
       "path": "steeltoe.discovery.abstractions/3.2.0",
       "hashPath": "steeltoe.discovery.abstractions.3.2.0.nupkg.sha512"
+    },
+    "Steeltoe.Discovery.ClientBase/3.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mECqmIDi4SUyNqmWWAknUMMxyweq28IS/Knv7/cbIyX04BQs/vM6iZmxcANMywPmjM5a5v7+D+UVcB8nobNlAw==",
+      "path": "steeltoe.discovery.clientbase/3.2.0",
+      "hashPath": "steeltoe.discovery.clientbase.3.2.0.nupkg.sha512"
+    },
+    "Steeltoe.Discovery.Eureka/3.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-51cbXfXTqBS2wTPCYAx1vL+tNDLt6FU26WGdI9gmJwY20cbXvpQYg2Vs/cakc/wsVB8yxwL5/mQIRoG2lB2xTQ==",
+      "path": "steeltoe.discovery.eureka/3.2.0",
+      "hashPath": "steeltoe.discovery.eureka.3.2.0.nupkg.sha512"
     },
     "Steeltoe.Extensions.Configuration.Abstractions/3.2.0": {
       "type": "package",
