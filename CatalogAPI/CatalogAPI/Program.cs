@@ -36,9 +36,9 @@ builder.Services.AddDbContext<CatalogContext>(o =>
 o.UseSqlServer(providerCs.ToString()));
 
 
-//builder.Services.AddDbContext<CatalogContext>(options =>
-//options.UseSqlServer(configuration.
-//GetConnectionString("Catalog_Conn_String")));
+builder.Services.AddDbContext<CatalogIdentityContext>(options =>
+options.UseSqlServer(configuration.
+GetConnectionString("Identity_Conn_String")));
 // Add services to the container.
 //DI singelton,scoped or transient
 builder.Services.AddScoped<ICatalogRepo, CatalogRepo>();
