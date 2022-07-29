@@ -10,6 +10,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDiscoveryClient(configuration);
+
+//Retry Policy
+/*
 builder.Services.AddHttpClient("cartApiClient", c =>
 {
     c.BaseAddress = new Uri("http://localhost:7072/");
@@ -17,8 +20,18 @@ builder.Services.AddHttpClient("cartApiClient", c =>
 {
                 TimeSpan.FromSeconds(1),
                 TimeSpan.FromSeconds(5),
-                TimeSpan.FromSeconds(15)
+                TimeSpan.FromSeconds(15),
+                 TimeSpan.FromSeconds(15)
             }));
+*/
+
+//Circuit Breaker Policy
+//circuit opens up after 2 consecutive trials
+builder.Services.AddHttpClient("cartApiClient", c => {
+    c.BaseAddress =
+new Uri("http://localhost:7072");
+})
+.AddTransientHttpErrorPolicy(p => p.CircuitBreakerAsync(2, TimeSpan.FromMinutes(2)));
 
 
 var app = builder.Build();
