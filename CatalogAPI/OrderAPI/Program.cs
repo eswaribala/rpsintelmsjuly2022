@@ -27,12 +27,24 @@ builder.Services.AddHttpClient("cartApiClient", c =>
 
 //Circuit Breaker Policy
 //circuit opens up after 2 consecutive trials
+
 builder.Services.AddHttpClient("cartApiClient", c => {
     c.BaseAddress =
 new Uri("http://localhost:7072");
 })
 .AddTransientHttpErrorPolicy(p => p.CircuitBreakerAsync(2, TimeSpan.FromMinutes(2)));
 
+
+//Bulkhead Policy
+
+builder.Services.AddSingleton<Polly.Bulkhead.AsyncBulkheadPolicy>((x) =>
+{
+    var policy = Policy.BulkheadAsync(
+        maxParallelization: 5,
+        maxQueuingActions: 5);
+
+    return policy;
+});
 
 var app = builder.Build();
 
