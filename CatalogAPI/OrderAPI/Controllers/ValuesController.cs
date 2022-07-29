@@ -17,17 +17,17 @@ namespace OrderAPI.Controllers
 
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public ActionResult<string> Get()
         {
             return GetValues();
         }
 
-        private string[] GetValues()
+        private string GetValues()
         {
             var httpClient = httpClientFactory.CreateClient("cartApiClient");
 
             var response = httpClient.GetAsync("WeatherForecast").Result;
-            return JsonConvert.DeserializeObject<string[]>(response.Content.ReadAsStringAsync().Result);
+            return response.Content.ReadAsStringAsync().Result.ToString();
         }
 
     }
