@@ -35,3 +35,8 @@ G:\Local disk\Intelmsjul2022\CatalogAPI\OrderAPI\obj\Debug\net6.0\refint\OrderAP
 G:\Local disk\Intelmsjul2022\CatalogAPI\OrderAPI\obj\Debug\net6.0\OrderAPI.pdb
 G:\Local disk\Intelmsjul2022\CatalogAPI\OrderAPI\obj\Debug\net6.0\OrderAPI.genruntimeconfig.cache
 G:\Local disk\Intelmsjul2022\CatalogAPI\OrderAPI\obj\Debug\net6.0\ref\OrderAPI.dll
+G:\Local disk\Intelmsjul2022\CatalogAPI\OrderAPI\bin\Debug\net6.0\Microsoft.Extensions.Http.Polly.dll
+G:\Local disk\Intelmsjul2022\CatalogAPI\OrderAPI\bin\Debug\net6.0\Newtonsoft.Json.dll
+G:\Local disk\Intelmsjul2022\CatalogAPI\OrderAPI\bin\Debug\net6.0\Polly.dll
+G:\Local disk\Intelmsjul2022\CatalogAPI\OrderAPI\bin\Debug\net6.0\Polly.Contrib.WaitAndRetry.dll
+G:\Local disk\Intelmsjul2022\CatalogAPI\OrderAPI\bin\Debug\net6.0\Polly.Extensions.Http.dll

@@ -1,3 +1,4 @@
+using Polly;
 using Steeltoe.Discovery.Client;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +10,17 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDiscoveryClient(configuration);
+builder.Services.AddHttpClient("cartApiClient", c =>
+{
+    c.BaseAddress = new Uri("http://localhost:7072/");
+}).AddTransientHttpErrorPolicy(policy => policy.WaitAndRetryAsync(new[]
+{
+                TimeSpan.FromSeconds(1),
+                TimeSpan.FromSeconds(5),
+                TimeSpan.FromSeconds(15)
+            }));
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
