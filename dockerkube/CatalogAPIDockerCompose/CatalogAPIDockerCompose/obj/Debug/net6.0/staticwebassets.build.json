@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "echNWSJLYpn4lYrvCYudDnVtbUh22Kxqc68ConZk2ZU=",
+  "Source": "CatalogAPIDockerCompose",
+  "BasePath": "_content/CatalogAPIDockerCompose",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

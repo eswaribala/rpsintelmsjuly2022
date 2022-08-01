@@ -8,6 +8,9 @@ services:
         com.microsoft.visual-studio.project-name: CatalogAPI
       target: base
     container_name: CatalogAPI
+    depends_on:
+      sqlserverinsservice:
+        condition: service_started
     entrypoint: tail -f /dev/null
     environment:
       ASPNETCORE_ENVIRONMENT: Development
@@ -19,7 +22,7 @@ services:
     labels:
       com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
         --additionalProbingPath /root/.nuget/fallbackpackages --additionalProbingPath
-        /root/.nuget/fallbackpackages2  "/app/bin/Debug/net6.0/CatalogAPI.dll"'
+        /root/.nuget/fallbackpackages2  ""'
       com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
         dotnet); then kill $$PID; fi"
       com.microsoft.visualstudio.debuggee.program: dotnet
@@ -37,4 +40,17 @@ services:
     - C:\Program Files\dotnet\sdk\NuGetFallbackFolder:/root/.nuget/fallbackpackages2:ro
     - C:\Users\Balasubramaniam\.nuget\packages:/root/.nuget/packages:ro
     - G:\Local disk\Intelmsjul2022\dockerkube01082022\CatalogAPI:/src:rw
+  sqlserverinsservice:
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: Vignesh@95
+    expose:
+    - '1433'
+    hostname: sqlserverinsservice
+    image: mcr.microsoft.com/mssql/server
+    ports:
+    - published: 1433
+      target: 1433
+    volumes:
+    - G:\Local disk\Intelmsjul2022\dockerkube01082022\CatalogAPI\invapi:/var/opt/mssql/data:rw
 version: '3.4'
