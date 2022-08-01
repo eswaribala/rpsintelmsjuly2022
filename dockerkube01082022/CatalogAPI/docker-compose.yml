@@ -1,0 +1,22 @@
+version: '3.4'
+
+services:
+  catalogapi:
+    image: ${DOCKER_REGISTRY-}catalogapi
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - sqlserverinsservice
+  sqlserverinsservice:  
+    image: mcr.microsoft.com/mssql/server 
+    hostname: 'sqlserverinsservice'  
+    environment:  
+      ACCEPT_EULA: 'Y' 
+      SA_PASSWORD: "Vignesh@95"  
+    volumes:  
+      - ./invapi:/var/opt/mssql/data  
+    ports:  
+      - '1433:1433'  
+    expose:  
+      - 1433 

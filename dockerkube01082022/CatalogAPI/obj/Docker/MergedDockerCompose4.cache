@@ -1,0 +1,32 @@
+services:
+  catalogapi:
+    build:
+      context: G:\Local disk\Intelmsjul2022\dockerkube01082022\CatalogAPI
+      dockerfile: Dockerfile
+    depends_on:
+      sqlserverinsservice:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: catalogapi
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\Balasubramaniam\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\Balasubramaniam\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+  sqlserverinsservice:
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: Vignesh@95
+    expose:
+    - '1433'
+    hostname: sqlserverinsservice
+    image: mcr.microsoft.com/mssql/server
+    ports:
+    - published: 1433
+      target: 1433
+    volumes:
+    - G:\Local disk\Intelmsjul2022\dockerkube01082022\CatalogAPI\insapi:/var/opt/mssql/data:rw
+version: '3.4'
