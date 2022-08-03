@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
       - name: aspnetcorecatalogapp
-        image: eswaribala/inteljul2022repo:catalogapi
+        image: eswaribala/inteljul2022repo:catalogappv1
         
         ports:
         - containerPort: 80
