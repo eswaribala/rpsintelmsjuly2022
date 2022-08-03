@@ -7,7 +7,6 @@ G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\Catalo
 G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\Microsoft.AspNetCore.Mvc.Versioning.dll
 G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\Swashbuckle.AspNetCore.SwaggerUI.dll
 G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\Microsoft.EntityFrameworkCore.dll
-G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\GraphQL.dll
 G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
 G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\Microsoft.Extensions.Identity.Core.dll
@@ -23,8 +22,6 @@ G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\GraphQ
 G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\GraphQL.Server.Ui.Playground.dll
 G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\Microsoft.EntityFrameworkCore.SqlServer.dll
 G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
-G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\Microsoft.IdentityModel.Protocols.dll
 G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\GraphQL-Parser.dll
 G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\Microsoft.IdentityModel.Logging.dll

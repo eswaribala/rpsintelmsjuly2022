@@ -24,9 +24,9 @@ builder.Services.AddDbContext<CatalogContext>(options =>
 options.UseSqlServer(configuration.
 GetConnectionString("Catalog_Conn_String")));
 
-builder.Services.AddDbContext<CatalogIdentityContext>(options =>
-options.UseSqlServer(configuration.
-GetConnectionString("Identity_Conn_String")));
+//builder.Services.AddDbContext<CatalogIdentityContext>(options =>
+//options.UseSqlServer(configuration.
+//GetConnectionString("Identity_Conn_String")));
 // Add services to the container.
 //DI singelton,scoped or transient
 builder.Services.AddScoped<ICatalogRepo, CatalogRepo>();
@@ -46,32 +46,32 @@ builder.Services.AddGraphQL()
                .AddSystemTextJson()
                .AddGraphTypes(typeof(CatalogSchema), ServiceLifetime.Scoped);
 // For Identity
-builder.Services.AddIdentity<IdentityUser, IdentityRole>()
-    .AddEntityFrameworkStores<CatalogIdentityContext>()
-    .AddDefaultTokenProviders();
+//builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+ //   .AddEntityFrameworkStores<CatalogIdentityContext>()
+ //   .AddDefaultTokenProviders();
 
 // Adding Authentication
-builder.Services.AddAuthentication(options =>
-{
-    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-})
+//builder.Services.AddAuthentication(options =>
+//{
+//    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+//    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+//    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+//})
 
 // Adding Jwt Bearer
-.AddJwtBearer(options =>
-{
-    options.SaveToken = true;
-    options.RequireHttpsMetadata = false;
-    options.TokenValidationParameters = new TokenValidationParameters()
-    {
-        ValidateIssuer = true,
-        ValidateAudience = true,
-        ValidAudience = configuration["JWT:ValidAudience"],
-        ValidIssuer = configuration["JWT:ValidIssuer"],
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:Secret"]))
-    };
-});
+//.AddJwtBearer(options =>
+//{
+//    options.SaveToken = true;
+//    options.RequireHttpsMetadata = false;
+//    options.TokenValidationParameters = new TokenValidationParameters()
+//    {
+//        ValidateIssuer = true,
+//        ValidateAudience = true,
+//        ValidAudience = configuration["JWT:ValidAudience"],
+//        ValidIssuer = configuration["JWT:ValidIssuer"],
+//        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:Secret"]))
+//    };
+//});
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
@@ -84,7 +84,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseAuthentication();
+//app.UseAuthentication();
 
 app.UseAuthorization();
 
