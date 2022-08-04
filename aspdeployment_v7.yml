@@ -1,36 +1,36 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: aspnetcore-catalogservice
+  name: aspnetcore-catservice
   labels:
-    app: aspnetcorecatalogapp
+    app: aspnetcorecatapp
 spec:
   ports:
   - port: 80
     name: http
   selector:
-    app: aspnetcorecatalogapp
+    app: aspnetcorecatapp
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: aspnetcorecatalogapp-v1
+  name: aspnetcorecatapp-v1
 spec:
   selector:
 
     matchLabels:
 
-      app: aspnetcorecatalogapp
+      app: aspnetcorecatapp
   replicas: 1
   template:
     metadata:
       labels:
-        app: aspnetcorecatalogapp
+        app: aspnetcorecatapp
         version: v1
     spec:
       containers:
-      - name: aspnetcorecatalogapp
-        image: eswaribala/inteljul2022repo:catalogappv1
+      - name: aspnetcorecatapp
+        image: eswaribala/inteljul2022repo:catalogappv3
         
         ports:
         - containerPort: 80
@@ -40,6 +40,9 @@ spec:
 
               value: DEVELOPMENT
 
-            - name: SQLSERVER_CONNECTIONSTRING
+            - name: SQLSERVER_CONNECTIONSTRING1
 
               value: "Server=Server=host.docker.internal,1433;Database=IntelEcommerceDB;User ID=sa;Password=Vignesh@95;MultipleActiveResultSets=true"
+            - name: SQLSERVER_CONNECTIONSTRING2
+
+              value: "Server=Server=host.docker.internal,1433;Database=IntelIdentityJul2022DB;User ID=sa;Password=Vignesh@95;MultipleActiveResultSets=true"
