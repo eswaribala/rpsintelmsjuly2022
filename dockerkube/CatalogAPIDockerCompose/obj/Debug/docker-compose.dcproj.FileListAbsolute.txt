@@ -40,3 +40,6 @@ G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\System
 G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\obj\Debug\docker-compose.dcproj.AssemblyReference.cache
 G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
 G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\obj\Debug\docker-compose.dcproj.CopyComplete
+G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\Microsoft.IdentityModel.Protocols.dll

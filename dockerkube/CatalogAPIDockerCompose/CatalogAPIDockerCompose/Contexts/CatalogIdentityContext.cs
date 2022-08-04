@@ -8,6 +8,8 @@ namespace CatalogAPIDockerCompose.Contexts
     {
         public CatalogIdentityContext(DbContextOptions<CatalogIdentityContext> options) : base(options)
         {
+            this.Database.Migrate();
+
         }
         protected override void OnModelCreating(ModelBuilder builder)
         {
