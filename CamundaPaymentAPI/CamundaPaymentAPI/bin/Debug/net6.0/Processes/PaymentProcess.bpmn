@@ -5,7 +5,7 @@
       <bpmn:outgoing>Flow_0jlp1nr</bpmn:outgoing>
     </bpmn:startEvent>
     <bpmn:sequenceFlow id="Flow_0jlp1nr" sourceRef="StartEvent_1" targetRef="Activity_Order" />
-    <bpmn:userTask id="Activity_Order" name="Order Form" camunda:formKey="embedded:deployment:OrderForm.html" camunda:assignee="demo">
+    <bpmn:userTask id="Activity_Order" name="Order Form" camunda:assignee="demo">
       <bpmn:incoming>Flow_0jlp1nr</bpmn:incoming>
       <bpmn:outgoing>Flow_1qy4808</bpmn:outgoing>
     </bpmn:userTask>
@@ -37,7 +37,7 @@
       <bpmn:incoming>Flow_05o62xe</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="Flow_05o62xe" sourceRef="Activity_DeductPayment" targetRef="Event_1hcnh7f" />
-    <bpmn:userTask id="Activity_PaymentMode" name="Mode of Payment" camunda:formKey="embedded:deployment:PaymentMode.html" camunda:assignee="demo">
+    <bpmn:userTask id="Activity_PaymentMode" name="Mode of Payment" camunda:assignee="demo">
       <bpmn:incoming>Flow_1qy4808</bpmn:incoming>
       <bpmn:outgoing>Flow_0u2pk2v</bpmn:outgoing>
     </bpmn:userTask>
@@ -60,7 +60,7 @@
       <bpmn:incoming>Flow_0cxkj3v</bpmn:incoming>
       <bpmn:outgoing>Flow_0ls9tkc</bpmn:outgoing>
     </bpmn:serviceTask>
-    <bpmn:userTask id="Activity_Card" name="Card Details" camunda:formKey="embedded:deployment:CardDetail.html" camunda:assignee="demo">
+    <bpmn:userTask id="Activity_Card" name="Card Details" camunda:assignee="demo">
       <bpmn:incoming>Flow_0dsctn8</bpmn:incoming>
       <bpmn:incoming>Flow_0919fbx</bpmn:incoming>
       <bpmn:outgoing>Flow_1lg6lhn</bpmn:outgoing>
@@ -76,7 +76,7 @@
     <bpmn:sequenceFlow id="Flow_1d9n8fg" sourceRef="Gateway_11f4ybn" targetRef="Activity_NetBanking">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{not status}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
-    <bpmn:userTask id="Activity_NetBanking" name="Net Banking Login" camunda:formKey="embedded:deployment:LoginForm.html">
+    <bpmn:userTask id="Activity_NetBanking" name="Net Banking Login">
       <bpmn:incoming>Flow_0pvye6z</bpmn:incoming>
       <bpmn:incoming>Flow_1d9n8fg</bpmn:incoming>
       <bpmn:outgoing>Flow_0hy6p8o</bpmn:outgoing>

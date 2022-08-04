@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "JhlL3hHpe9YGrVi+7tOELr6PMOaAzPfzsiSEH47nJFE=",
+  "Source": "CamundaPaymentAPI",
+  "BasePath": "_content/CamundaPaymentAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
