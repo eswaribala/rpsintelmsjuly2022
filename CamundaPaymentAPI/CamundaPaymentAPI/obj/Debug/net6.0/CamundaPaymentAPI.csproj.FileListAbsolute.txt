@@ -1,6 +1,10 @@
 G:\Local disk\Intelmsjul2022\CamundaPaymentAPI\CamundaPaymentAPI\bin\Debug\net6.0\appsettings.Development.json
 G:\Local disk\Intelmsjul2022\CamundaPaymentAPI\CamundaPaymentAPI\bin\Debug\net6.0\appsettings.json
 G:\Local disk\Intelmsjul2022\CamundaPaymentAPI\CamundaPaymentAPI\bin\Debug\net6.0\CamundaPaymentAPI.exe
+G:\Local disk\Intelmsjul2022\CamundaPaymentAPI\CamundaPaymentAPI\bin\Debug\net6.0\Forms\CardDetail.html
+G:\Local disk\Intelmsjul2022\CamundaPaymentAPI\CamundaPaymentAPI\bin\Debug\net6.0\Forms\LoginForm.html
+G:\Local disk\Intelmsjul2022\CamundaPaymentAPI\CamundaPaymentAPI\bin\Debug\net6.0\Forms\OrderForm.html
+G:\Local disk\Intelmsjul2022\CamundaPaymentAPI\CamundaPaymentAPI\bin\Debug\net6.0\Forms\PaymentMode.html
 G:\Local disk\Intelmsjul2022\CamundaPaymentAPI\CamundaPaymentAPI\bin\Debug\net6.0\Processes\PaymentProcess.bpmn
 G:\Local disk\Intelmsjul2022\CamundaPaymentAPI\CamundaPaymentAPI\bin\Debug\net6.0\CamundaPaymentAPI.deps.json
 G:\Local disk\Intelmsjul2022\CamundaPaymentAPI\CamundaPaymentAPI\bin\Debug\net6.0\CamundaPaymentAPI.runtimeconfig.json

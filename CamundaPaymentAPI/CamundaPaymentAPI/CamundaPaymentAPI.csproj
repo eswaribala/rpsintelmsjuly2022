@@ -9,10 +9,26 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Forms\CardDetail.html" />
+    <None Remove="Forms\LoginForm.html" />
+    <None Remove="Forms\OrderForm.html" />
+    <None Remove="Forms\PaymentMode.html" />
     <None Remove="Processes\PaymentProcess.bpmn" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Forms\CardDetail.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginForm.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OrderForm.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PaymentMode.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Processes\PaymentProcess.bpmn">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -23,10 +39,6 @@
     <PackageReference Include="Camunda.Worker" Version="0.13.4" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.14.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Forms\" />
   </ItemGroup>
 
 </Project>
