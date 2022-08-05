@@ -1,4 +1,7 @@
+using CQRSCartAPI.Commands;
 using CQRSCartAPI.Contexts;
+using CQRSCartAPI.Events;
+using CQRSCartAPI.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +16,11 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<CartContext>
                (options => options.UseSqlite
                (configuration.GetConnectionString("SqliteConnection")));
+builder.Services.AddTransient<CartSqliteRepository>();
+builder.Services.AddTransient<CartMongoRepository>();
+builder.Services.AddTransient<AMQPEventPublisher>();
+builder.Services.AddSingleton<CartMessageListener>();
+builder.Services.AddScoped<ICommandHandler<Command>, CartCommandHandler>();
 
 var app = builder.Build();
 
