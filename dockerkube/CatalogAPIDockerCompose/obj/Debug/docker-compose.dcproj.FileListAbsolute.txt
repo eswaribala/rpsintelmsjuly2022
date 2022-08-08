@@ -43,3 +43,14 @@ G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\obj\Debug\docker
 G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\Microsoft.IdentityModel.Protocols.dll
+G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\Serilog.dll
+G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\Serilog.Sinks.Debug.dll
+G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\Serilog.Sinks.Console.dll
+G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\Serilog.Sinks.Elasticsearch.dll
+G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\Serilog.Settings.Configuration.dll
+G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\Microsoft.Extensions.DependencyModel.dll
+G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\Serilog.Extensions.Hosting.dll
+G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\Serilog.Extensions.Logging.dll
+G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\Elasticsearch.Net.dll
+G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\Serilog.Sinks.PeriodicBatching.dll
+G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\Serilog.Formatting.Elasticsearch.dll

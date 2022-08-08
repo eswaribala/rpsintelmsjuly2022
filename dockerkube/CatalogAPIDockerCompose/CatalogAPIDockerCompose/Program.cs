@@ -11,12 +11,20 @@ using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-
+using Serilog;
+using Serilog.Sinks.Elasticsearch;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
-
-ConfigurationManager configuration = builder.Configuration;
+//environment
+var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+var configuration = new ConfigurationBuilder()
+    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+    .AddJsonFile(
+        $"appsettings.{Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")}.json",
+        optional: true)
+    .Build();
+//ConfigurationManager configuration = builder.Configuration;
 
 
 
@@ -31,6 +39,25 @@ GetConnectionString("Identity_Conn_String")));
 //DI singelton,scoped or transient
 builder.Services.AddScoped<ICatalogRepo, CatalogRepo>();
 builder.Services.AddControllers();
+//ELK
+Log.Logger = new LoggerConfiguration()
+    .Enrich.FromLogContext()
+
+    .WriteTo.Debug()
+    .WriteTo.Console()
+    .WriteTo.Elasticsearch(new ElasticsearchSinkOptions(new
+        Uri(configuration["ElasticConfiguration:Uri"]))
+    {
+        AutoRegisterTemplate = true,
+        IndexFormat = $"IntelCatalogIndex-{DateTime.UtcNow:yyyy-MM}"
+    })
+    .Enrich.WithProperty("Environment", environment)
+    .ReadFrom.Configuration(configuration)
+    .CreateLogger();
+
+builder.Host.UseSerilog();
+
+
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

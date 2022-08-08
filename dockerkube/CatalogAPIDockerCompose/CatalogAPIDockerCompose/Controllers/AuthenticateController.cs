@@ -17,15 +17,18 @@ namespace CatalogAPIDockerCompose.Controllers
         private readonly UserManager<IdentityUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IConfiguration _configuration;
+        private readonly ILogger<AuthenticateController> _logger;
 
         public AuthenticateController(
             UserManager<IdentityUser> userManager,
             RoleManager<IdentityRole> roleManager,
-            IConfiguration configuration)
+            IConfiguration configuration, ILogger<AuthenticateController> logger)
         {
             _userManager = userManager;
             _roleManager = roleManager;
             _configuration = configuration;
+            _logger = logger;
+            _logger = logger;
         }
 
         [HttpPost]
@@ -49,7 +52,7 @@ namespace CatalogAPIDockerCompose.Controllers
                 }
 
                var token = GetToken(authClaims);
-
+                _logger.LogInformation("Token Returned.....");
                 return Ok(new
                 {
                     token = new JwtSecurityTokenHandler().WriteToken(token),
@@ -84,6 +87,7 @@ namespace CatalogAPIDockerCompose.Controllers
         [Route("register-admin")]
         public async Task<IActionResult> RegisterAdmin([FromBody] RegisterModel model)
         {
+            _logger.LogInformation("User Registration Starts.....");
             var userExists = await _userManager.FindByNameAsync(model.Username);
             if (userExists != null)
                 return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "User already exists!" });
@@ -111,6 +115,7 @@ namespace CatalogAPIDockerCompose.Controllers
             {
                 await _userManager.AddToRoleAsync(user, UserRoles.User);
             }
+            _logger.LogInformation("Role Created.....");
             return Ok(new Response { Status = "Success", Message = "User created successfully!" });
         }
 
@@ -126,7 +131,7 @@ namespace CatalogAPIDockerCompose.Controllers
                 claims: authClaims,
                 signingCredentials: new SigningCredentials(authSigningKey, SecurityAlgorithms.HmacSha256)
                 );
-
+            _logger.LogInformation("Token Generated....."+token);
             return token;
         }
     }
