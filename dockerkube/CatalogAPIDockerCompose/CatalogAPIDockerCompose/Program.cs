@@ -4,6 +4,8 @@ using CatalogAPIDockerCompose.Repositories;
 using CatalogAPIDockerCompose.Schemas;
 using GraphQL.Server;
 using GraphQL.Server.Ui.Playground;
+using Jaeger;
+using Jaeger.Samplers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -11,8 +13,12 @@ using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using OpenTracing;
+using OpenTracing.Util;
+using Prometheus;
 using Serilog;
 using Serilog.Sinks.Elasticsearch;
+using System.Reflection;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -100,6 +106,30 @@ options.TokenValidationParameters = new TokenValidationParameters()
 };
 });
 builder.Services.AddSwaggerGen();
+//tracing
+
+builder.Services.AddSingleton<ITracer>(serviceProvider =>
+{
+    string serviceName = Assembly.GetEntryAssembly().GetName().Name;
+
+    ILoggerFactory loggerFactory = serviceProvider.GetRequiredService<ILoggerFactory>();
+
+    ISampler sampler = new ConstSampler(sample: true);
+
+    ITracer tracer = new Tracer.Builder(serviceName)
+        .WithLoggerFactory(loggerFactory)
+        .WithSampler(sampler)
+        .Build();
+
+    GlobalTracer.Register(tracer);
+
+    return tracer;
+});
+
+builder.Services.AddOpenTracing();
+
+
+
 
 var app = builder.Build();
 
@@ -109,7 +139,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseMetricServer();
 app.UseHttpsRedirection();
 app.UseAuthentication();
 

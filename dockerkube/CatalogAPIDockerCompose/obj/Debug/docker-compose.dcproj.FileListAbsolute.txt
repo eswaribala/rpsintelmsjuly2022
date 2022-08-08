@@ -54,3 +54,8 @@ G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\Serilo
 G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\Elasticsearch.Net.dll
 G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\Serilog.Sinks.PeriodicBatching.dll
 G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\Serilog.Formatting.Elasticsearch.dll
+G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\Prometheus.AspNetCore.dll
+G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\Prometheus.NetStandard.dll
+G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\OpenTracing.dll
+G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\Jaeger.Core.dll
+G:\Local disk\Intelmsjul2022\dockerkube\CatalogAPIDockerCompose\bin\Debug\OpenTracing.Contrib.NetCore.dll

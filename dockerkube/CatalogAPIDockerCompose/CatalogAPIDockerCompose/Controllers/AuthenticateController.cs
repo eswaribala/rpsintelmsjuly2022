@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using OpenTracing;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -18,17 +19,21 @@ namespace CatalogAPIDockerCompose.Controllers
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IConfiguration _configuration;
         private readonly ILogger<AuthenticateController> _logger;
+        private ITracer _tracer;
 
         public AuthenticateController(
             UserManager<IdentityUser> userManager,
             RoleManager<IdentityRole> roleManager,
-            IConfiguration configuration, ILogger<AuthenticateController> logger)
+            IConfiguration configuration, 
+            ILogger<AuthenticateController> logger,
+            ITracer tracer)
         {
             _userManager = userManager;
             _roleManager = roleManager;
             _configuration = configuration;
             _logger = logger;
             _logger = logger;
+            _tracer = tracer;
         }
 
         [HttpPost]
@@ -50,8 +55,10 @@ namespace CatalogAPIDockerCompose.Controllers
                 {
                     authClaims.Add(new Claim(ClaimTypes.Role, userRole));
                 }
-
-               var token = GetToken(authClaims);
+                var actionName = ControllerContext.ActionDescriptor.DisplayName;
+                using var scope = _tracer.BuildSpan(actionName).StartActive(true);
+                scope.Span.Log("Login Tracking....");
+                var token = GetToken(authClaims);
                 _logger.LogInformation("Token Returned.....");
                 return Ok(new
                 {
@@ -91,7 +98,9 @@ namespace CatalogAPIDockerCompose.Controllers
             var userExists = await _userManager.FindByNameAsync(model.Username);
             if (userExists != null)
                 return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "User already exists!" });
-
+            var actionName = ControllerContext.ActionDescriptor.DisplayName;
+            using var scope = _tracer.BuildSpan(actionName).StartActive(true);
+            scope.Span.Log("Register Admin Tracking....");
             IdentityUser user = new()
             {
                 Email = model.Email,
@@ -131,6 +140,9 @@ namespace CatalogAPIDockerCompose.Controllers
                 claims: authClaims,
                 signingCredentials: new SigningCredentials(authSigningKey, SecurityAlgorithms.HmacSha256)
                 );
+            var actionName = ControllerContext.ActionDescriptor.DisplayName;
+            using var scope = _tracer.BuildSpan(actionName).StartActive(true);
+            scope.Span.Log("JWT Token Tracking....");
             _logger.LogInformation("Token Generated....."+token);
             return token;
         }
